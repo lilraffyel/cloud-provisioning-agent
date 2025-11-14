@@ -24,6 +24,12 @@ variable "dns_servers" {
   type        = list(string)
 }
 
+variable "tags" {
+  description = "A map of tags to assign to the resource"
+  type        = map(string)
+  default     = {}
+}
+
 # Subnet Variables
 variable "subnet_name" {
   description = "The name of the subnet"

@@ -1,3 +1,4 @@
+# Network Security Group Variables
 variable "resource_group_name" {
   description = "The name of the resource group"
   type        = string
@@ -13,6 +14,13 @@ variable "network_security_group_name" {
   type        = string
 }
 
+variable "tags" {
+  description = "A map of tags to assign to the resource"
+  type        = map(string)
+  default     = {}
+}
+
+# Network Security Rule Variables
 variable "security_rule_name" {
   description = "The name of the network security rule"
   type        = string
